@@ -45,21 +45,15 @@ export function Hero({ onStartClick }: HeroProps) {
           Get verified picks and pro analysis from full-time experts.
         </p>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+        {/* CTA Button */}
+        <div className="flex items-center justify-center mb-12">
           <Button
             size="lg"
-            className="bg-[#3b82f6] hover:bg-[#2563eb] text-white font-bold text-lg px-10 py-6 rounded-lg shadow-xl shadow-[#3b82f6]/40 hover:shadow-[#3b82f6]/60 transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+            className="relative group bg-gradient-to-r from-[#3b82f6] via-[#2563eb] to-[#1d4ed8] hover:from-[#2563eb] hover:via-[#1d4ed8] hover:to-[#1e40af] text-white font-black text-xl px-16 py-8 rounded-xl shadow-2xl shadow-[#3b82f6]/60 hover:shadow-[#3b82f6]/80 transition-all duration-300 hover:scale-110 w-full sm:w-auto animate-pulse hover:animate-none"
             onClick={onStartClick}
           >
-            Start Free Trial
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-2 border-white/30 text-white hover:bg-white/10 font-bold text-lg px-10 py-6 rounded-lg transition-all duration-300 w-full sm:w-auto"
-          >
-            See Our Results
+            <span className="relative z-10 tracking-wide">🎯 GET 7 DAYS FREE NOW</span>
+            <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#60a5fa] to-[#3b82f6] opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
           </Button>
         </div>
 

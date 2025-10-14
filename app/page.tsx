@@ -10,12 +10,14 @@ import { Footer } from "@/components/footer"
 import { Navigation } from "@/components/navigation"
 import { LoadingScreen } from "@/components/loading-screen"
 import { PromoPopup } from "@/components/promo-popup"
+import { AutoPromoPopup } from "@/components/auto-promo-popup"
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
   const [loadingFadeOut, setLoadingFadeOut] = useState(false)
   const [showContent, setShowContent] = useState(false)
   const [showPopup, setShowPopup] = useState(false)
+  const [showAutoPopup, setShowAutoPopup] = useState(true)
 
   useEffect(() => {
     // Prevent scroll during loading
@@ -44,15 +46,14 @@ export default function Home() {
       >
         <Navigation />
         <Hero onStartClick={() => setShowPopup(true)} />
-        {/* </CHANGE> */}
         <PromoBanner />
         <Features />
         <Results />
         <Reviews />
         <Footer />
         <PromoPopup isVisible={showPopup} onClose={() => setShowPopup(false)} />
-        {/* </CHANGE> */}
       </div>
+      {showContent && showAutoPopup && <AutoPromoPopup onClose={() => setShowAutoPopup(false)} />}
     </>
   )
 }
