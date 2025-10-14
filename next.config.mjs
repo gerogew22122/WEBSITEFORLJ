@@ -9,6 +9,10 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  transpilePackages: ['lucide-react', '@radix-ui/react-slot'],
+  experimental: {
+    esmExternals: 'loose',
+  },
 }
 
 export default nextConfig
