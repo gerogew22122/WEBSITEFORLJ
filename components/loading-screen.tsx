@@ -5,17 +5,35 @@ import Image from "next/image"
 
 export function LoadingScreen({ onComplete, fadeOut = false }: { onComplete: () => void; fadeOut?: boolean }) {
   const [stage, setStage] = useState(0)
+  const [typedText, setTypedText] = useState("")
+  const fullText = "We have found the most profitable sportsbetting method"
 
   useEffect(() => {
     const timers = [
-      setTimeout(() => setStage(1), 300), // LJ logo appears
-      setTimeout(() => setStage(2), 1500), // "We have found" text
-      setTimeout(() => setStage(3), 3500), // "EVER" slam
-      setTimeout(() => onComplete(), 5000), // Complete
+      setTimeout(() => setStage(1), 800), // LJ logo appears (slower start)
+      setTimeout(() => setStage(2), 2000), // Start typing text
+      setTimeout(() => setStage(3), 5000), // "EVER" slam
+      setTimeout(() => onComplete(), 6500), // Complete
     ]
 
     return () => timers.forEach(clearTimeout)
   }, [onComplete])
+
+  useEffect(() => {
+    if (stage >= 2 && stage < 3) {
+      let currentIndex = 0
+      const typingInterval = setInterval(() => {
+        if (currentIndex <= fullText.length) {
+          setTypedText(fullText.slice(0, currentIndex))
+          currentIndex++
+        } else {
+          clearInterval(typingInterval)
+        }
+      }, 40) // Typing speed
+
+      return () => clearInterval(typingInterval)
+    }
+  }, [stage])
 
   return (
     <div className={`fixed inset-0 z-50 flex items-center justify-center bg-black overflow-hidden transition-opacity duration-700 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}>
@@ -66,7 +84,7 @@ export function LoadingScreen({ onComplete, fadeOut = false }: { onComplete: () 
 
         <div className="space-y-8">
           <h1
-            className={`font-light tracking-wide text-5xl md:text-7xl lg:text-8xl text-white transition-all duration-1000 leading-tight ${
+            className={`font-light tracking-wide text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-white transition-all duration-1000 leading-tight px-4 ${
               stage >= 2 && stage < 3
                 ? "opacity-100 translate-y-0"
                 : stage >= 3
@@ -78,19 +96,13 @@ export function LoadingScreen({ onComplete, fadeOut = false }: { onComplete: () 
               fontWeight: 300,
               letterSpacing: "0.02em",
               textShadow: "0 2px 40px rgba(0,0,0,0.8)",
+              minHeight: "120px",
             }}
           >
-            We have found the most profitable
-            <br />
-            <span
-              className="font-medium bg-gradient-to-r from-[#3b82f6] via-[#60a5fa] to-[#3b82f6] bg-clip-text text-transparent"
-              style={{
-                fontWeight: 500,
-                textShadow: "0 0 40px rgba(59,130,246,0.4)",
-              }}
-            >
-              sportsbetting method
-            </span>
+            {typedText}
+            {stage >= 2 && stage < 3 && typedText.length < fullText.length && (
+              <span className="animate-pulse">|</span>
+            )}
           </h1>
 
           <div
@@ -100,13 +112,13 @@ export function LoadingScreen({ onComplete, fadeOut = false }: { onComplete: () 
             }}
           >
             <h2
-              className="font-black text-[10rem] md:text-[14rem] lg:text-[18rem] leading-none bg-gradient-to-b from-[#93c5fd] via-[#3b82f6] to-[#1e40af] bg-clip-text text-transparent"
+              className="font-black text-[6rem] sm:text-[8rem] md:text-[12rem] lg:text-[16rem] leading-none bg-gradient-to-b from-[#93c5fd] via-[#3b82f6] to-[#1e40af] bg-clip-text text-transparent"
               style={{
                 fontFamily: "'Inter', sans-serif",
                 fontWeight: 900,
                 letterSpacing: "0.05em",
                 textShadow: "0 0 80px rgba(59,130,246,0.6)",
-                WebkitTextStroke: "3px rgba(59,130,246,0.2)",
+                WebkitTextStroke: "2px rgba(59,130,246,0.2)",
               }}
             >
               EVER
