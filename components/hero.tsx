@@ -25,7 +25,7 @@ export function Hero({ onStartClick }: HeroProps) {
         <div className="max-w-5xl mx-auto">
           <div className="text-center">
             <div className="relative mb-8 animate-fade-in-up">
-              <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 md:-translate-x-24 z-0 hidden lg:block">
+              <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-24 md:-translate-x-48 lg:-translate-x-64 z-0 hidden lg:block">
                 <Image
                   src="/lebron-hero.png"
                   alt="LeBron James"
@@ -36,7 +36,7 @@ export function Hero({ onStartClick }: HeroProps) {
                 />
               </div>
 
-              <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 md:translate-x-24 z-0 hidden lg:block">
+              <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-24 md:translate-x-48 lg:translate-x-64 z-0 hidden lg:block">
                 <Image
                   src="/horse-racing-hero.png"
                   alt="Horse Racing"
