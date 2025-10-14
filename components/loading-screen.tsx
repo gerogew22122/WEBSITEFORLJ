@@ -29,7 +29,7 @@ export function LoadingScreen({ onComplete, fadeOut = false }: { onComplete: () 
         } else {
           clearInterval(typingInterval)
         }
-      }, 40) // Typing speed
+      }, 70) // Typing speed (slower)
 
       return () => clearInterval(typingInterval)
     }
