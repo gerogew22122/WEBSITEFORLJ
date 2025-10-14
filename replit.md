@@ -2,7 +2,20 @@
 
 ## Overview
 
-LJ Pickz is a sports betting/investing community landing page built with Next.js 15. The application serves as a marketing website for a sports picks service, featuring an animated hero section, feature highlights, results statistics, customer reviews, and promotional popups. The site is designed with a dark theme and emphasizes visual appeal with animated elements and gradient effects.
+LJ Pickz is a sports betting/investing community landing page built with Next.js 15. The application serves as a marketing website for a sports picks service, featuring a professional hero section with credible messaging, animated loading screen with typing effect, feature highlights, results statistics, customer reviews, and promotional popups. The site is designed with a dark theme and emphasizes visual appeal with clean animations and professional gradient effects.
+
+## Recent Changes
+
+**October 14, 2025 - Hero Section Redesign & Loading Screen Improvements:**
+- Completely redesigned hero section for professional, credible appearance
+- Removed competing celebrity visuals (LeBron, horse) for cleaner focus
+- Implemented centralized vertical layout with clear hierarchy
+- Added credible metrics: "Verified 72% Win Rate" and "Since 2021"
+- Dual CTA buttons: "Start Free Trial" (primary) and "See Our Results" (secondary)
+- Enhanced loading screen with typing effect (70ms per character)
+- Mobile-responsive text sizing (3xl on mobile, scales to 7xl on desktop)
+- Smooth fade-out transition (700ms) between loading screen and main page
+- Slower loading start (800ms delay) for better pacing
 
 ## User Preferences
 
@@ -46,25 +59,30 @@ Preferred communication style: Simple, everyday language.
 - Business logic components in root `components` directory
 
 **Animation Strategy:**
-- Multi-stage loading screen with timed transitions
+- Multi-stage loading screen with typing effect and timed transitions (6.5s total)
+- Typing animation at 70ms per character for smooth text reveal
+- Fade-out transition (700ms + 800ms delay) to main page
 - CSS-based animations for performance (transform, opacity)
-- Gradient backgrounds with animated orbs for visual depth
+- Clean gradient backgrounds with subtle blue accent glow
 - Scroll-based navigation state changes
 
 **Responsive Design:**
-- Mobile-first approach with Tailwind breakpoints (md, lg)
-- Grid layouts that adapt to screen size
-- Hidden elements on mobile (athlete images in hero)
+- Mobile-first approach with Tailwind breakpoints (sm, md, lg)
+- Text scales appropriately across devices (3xl → 7xl for headlines)
+- Loading screen text optimized for mobile viewports
+- Clean, centered layouts that work on all screen sizes
+- No competing visuals - focus on content and clarity
 
 **User Flow:**
-1. Loading screen with brand reveal animation
-2. Hero section with call-to-action
-3. Promo banner with discount code
-4. Feature highlights in card grid
-5. Results/statistics section
-6. Customer reviews
-7. Footer with navigation and social links
-8. Promotional popup triggered by CTA buttons
+1. Loading screen with brand reveal animation and typing effect (6.5s)
+2. Smooth fade transition to main page (700ms fade + 800ms delay)
+3. Professional hero section with dual CTAs and credible metrics
+4. Promo banner with discount code
+5. Feature highlights in card grid
+6. Results/statistics section
+7. Customer reviews
+8. Footer with navigation and social links
+9. Promotional popup triggered by CTA buttons
 
 ### Performance Considerations
 
@@ -135,19 +153,25 @@ Preferred communication style: Simple, everyday language.
 **Dark Theme Default:**
 - HTML element has `dark` class by default
 - CSS variables configured for dark mode color scheme
+- Professional navy-to-black gradient backgrounds
 - No theme toggle currently implemented
 
-**Animation-Heavy UX:**
-- Loading screen with multi-stage reveal (5-second sequence)
+**Professional UX Design:**
+- Loading screen with typing effect (6.5-second sequence)
+- Smooth fade transitions (700ms) for polished feel
 - Scroll prevention during loading
 - Timed transitions between animation stages
 - Performance considerations with CSS transforms over layout changes
+- Mobile-responsive text sizing for all devices
 
-**Promotional Focus:**
-- Multiple CTAs throughout the page
+**Credible Messaging & Conversion Focus:**
+- Hero section emphasizes credibility: "Verified 72% Win Rate Since 2021"
+- Dual CTAs: Primary "Start Free Trial" and secondary "See Our Results"
+- Clean, professional design without distracting imagery
+- Social proof: "1,000+ Active Members"
+- Clear value proposition: "Get verified picks and pro analysis from full-time experts"
 - Popup modal for conversion
 - Promo code banner for discount awareness
-- Social proof through reviews section
 
 ## Replit Migration Configuration
 
