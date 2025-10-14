@@ -64,6 +64,11 @@ export function Hero({ onStartClick }: HeroProps) {
             <span className="font-semibold">1,000+ Active Members</span>
           </div>
           <div className="hidden sm:block w-px h-4 bg-gray-600" />
+          <div className="flex items-center gap-2">
+            <Image src="/whop-logo.png" alt="Whop" width={80} height={24} className="h-5 w-auto" />
+            <span className="font-semibold">⭐ 4.7 Stars</span>
+          </div>
+          <div className="hidden sm:block w-px h-4 bg-gray-600" />
           <div className="font-semibold">Verified 72% Win Rate</div>
           <div className="hidden sm:block w-px h-4 bg-gray-600" />
           <div className="font-semibold">Since 2021</div>

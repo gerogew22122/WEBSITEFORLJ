@@ -60,9 +60,6 @@ export function AutoPromoPopup({ onClose }: AutoPromoPopupProps) {
             </Button>
           </div>
 
-          <p className="text-sm text-gray-500">
-            Enter code FREE at checkout • No credit card required
-          </p>
         </div>
       </div>
     </div>
