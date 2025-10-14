@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import Image from "next/image"
 
-export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
+export function LoadingScreen({ onComplete, fadeOut = false }: { onComplete: () => void; fadeOut?: boolean }) {
   const [stage, setStage] = useState(0)
 
   useEffect(() => {
@@ -18,7 +18,7 @@ export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
   }, [onComplete])
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black overflow-hidden">
+    <div className={`fixed inset-0 z-50 flex items-center justify-center bg-black overflow-hidden transition-opacity duration-700 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}>
       <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0a0f1e] to-black">
         <div
           className="absolute inset-0"

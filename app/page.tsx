@@ -13,9 +13,9 @@ import { PromoPopup } from "@/components/promo-popup"
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
+  const [loadingFadeOut, setLoadingFadeOut] = useState(false)
   const [showContent, setShowContent] = useState(false)
   const [showPopup, setShowPopup] = useState(false)
-  // </CHANGE>
 
   useEffect(() => {
     // Prevent scroll during loading
@@ -27,15 +27,18 @@ export default function Home() {
   }, [isLoading])
 
   const handleLoadingComplete = () => {
-    setIsLoading(false)
-    setTimeout(() => setShowContent(true), 100)
+    setLoadingFadeOut(true)
+    setTimeout(() => {
+      setIsLoading(false)
+      setShowContent(true)
+    }, 800)
   }
 
   return (
     <>
-      {isLoading && <LoadingScreen onComplete={handleLoadingComplete} />}
+      {isLoading && <LoadingScreen onComplete={handleLoadingComplete} fadeOut={loadingFadeOut} />}
       <div
-        className={`min-h-screen bg-[#0a0a0a] transition-opacity duration-1000 ${
+        className={`min-h-screen bg-[#0a0a0a] transition-opacity duration-1500 ${
           showContent ? "opacity-100" : "opacity-0"
         }`}
       >
