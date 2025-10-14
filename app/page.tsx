@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react"
 import { Hero } from "@/components/hero"
-import { PhoneShowcase } from "@/components/phone-showcase"
 import { Features } from "@/components/features"
 import { Results } from "@/components/results"
 import { Reviews } from "@/components/reviews"
@@ -46,7 +45,6 @@ export default function Home() {
       >
         <Navigation />
         <Hero onStartClick={() => setShowPopup(true)} />
-        <PhoneShowcase />
         <Features />
         <Results />
         <Reviews />
