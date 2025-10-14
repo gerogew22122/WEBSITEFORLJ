@@ -26,26 +26,36 @@ export function Hero({ onStartClick }: HeroProps) {
           <div className="text-center">
             <div className="relative mb-8 animate-fade-in-up">
               <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-24 md:-translate-x-48 lg:-translate-x-64 z-0 hidden lg:block">
-                <Image
-                  src="/lebron-hero.png"
-                  alt="LeBron James"
-                  width={400}
-                  height={600}
-                  className="w-48 h-auto md:w-64 lg:w-80 object-contain drop-shadow-[0_0_60px_rgba(59,130,246,0.8)] opacity-90 animate-float grayscale"
-                  priority
-                />
+                <div className="relative" style={{ 
+                  maskImage: 'linear-gradient(to right, transparent, black 20%, black 80%, transparent)',
+                  WebkitMaskImage: 'linear-gradient(to right, transparent, black 20%, black 80%, transparent)'
+                }}>
+                  <Image
+                    src="/lebron-hero.png"
+                    alt="LeBron James"
+                    width={400}
+                    height={600}
+                    className="w-48 h-auto md:w-64 lg:w-80 object-contain drop-shadow-[0_0_60px_rgba(59,130,246,0.8)] opacity-90 animate-float grayscale"
+                    priority
+                  />
+                </div>
               </div>
 
               <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-24 md:translate-x-48 lg:translate-x-64 z-0 hidden lg:block">
-                <Image
-                  src="/horse-racing-hero.png"
-                  alt="Horse Racing"
-                  width={500}
-                  height={400}
-                  className="w-56 h-auto md:w-72 lg:w-96 object-contain drop-shadow-[0_0_60px_rgba(16,185,129,0.8)] opacity-90 animate-float grayscale"
-                  style={{ animationDelay: "0.5s" }}
-                  priority
-                />
+                <div className="relative" style={{ 
+                  maskImage: 'linear-gradient(to left, transparent, black 20%, black 80%, transparent)',
+                  WebkitMaskImage: 'linear-gradient(to left, transparent, black 20%, black 80%, transparent)'
+                }}>
+                  <Image
+                    src="/horse-racing-hero.png"
+                    alt="Horse Racing"
+                    width={500}
+                    height={400}
+                    className="w-56 h-auto md:w-72 lg:w-96 object-contain drop-shadow-[0_0_60px_rgba(16,185,129,0.8)] opacity-90 animate-float grayscale"
+                    style={{ animationDelay: "0.5s" }}
+                    priority
+                  />
+                </div>
               </div>
 
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0">
