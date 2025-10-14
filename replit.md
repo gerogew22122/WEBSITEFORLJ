@@ -10,14 +10,16 @@ LJ Pickz is a sports betting/investing community landing page built with Next.js
 - Completely redesigned hero section for professional, credible appearance
 - Removed competing celebrity visuals (LeBron, horse) for cleaner focus
 - Implemented centralized vertical layout with clear hierarchy
-- Added credible metrics: "Verified 72% Win Rate" and "Since 2021"
 - High-converting CTA button: "🎯 GET 7 DAYS FREE NOW" with gradient, pulse animation
 - Enhanced loading screen with typing effect (45ms per character)
-- Consistent Inter font family across all loading screen text
+- Consistent Inter font family across all loading screen text (fixed using inter.className)
 - Mobile-responsive text sizing (3xl on mobile, scales to 7xl on desktop)
 - Smooth fade-out transition (700ms) between loading screen and main page
-- Auto-popup appears 5 seconds after loading completes with "use code FREE at checkout" message
+- Auto-popup appears 5 seconds after loading with "Use code FREE at checkout!" message (no disclaimer text)
 - Slower loading start (800ms delay) for better pacing
+- Removed promo banner component
+- Added Whop logo with "4.7 Stars on Whop" rating to social proof
+- Social proof displays: 1,000+ Active Members (Discord), 4.7 Stars on Whop, Since 2021
 
 ## User Preferences
 

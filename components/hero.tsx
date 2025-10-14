@@ -42,7 +42,7 @@ export function Hero({ onStartClick }: HeroProps) {
 
         {/* Value Proposition */}
         <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto font-medium">
-          Get verified picks and pro analysis from full-time experts.
+          Get inside sport and racing picks and pro analysis from full time experts
         </p>
 
         {/* CTA Button */}
@@ -68,8 +68,6 @@ export function Hero({ onStartClick }: HeroProps) {
             <Image src="/whop-icon.png" alt="Whop" width={32} height={32} className="w-8 h-8" />
             <span className="font-semibold">4.7 Stars on Whop</span>
           </div>
-          <div className="hidden sm:block w-px h-4 bg-gray-600" />
-          <div className="font-semibold">Verified 72% Win Rate</div>
           <div className="hidden sm:block w-px h-4 bg-gray-600" />
           <div className="font-semibold">Since 2021</div>
         </div>
