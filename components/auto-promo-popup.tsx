@@ -44,7 +44,7 @@ export function AutoPromoPopup({ onClose }: AutoPromoPopupProps) {
           </h2>
           
           <p className="text-xl text-gray-300 font-semibold">
-            If you sign up now
+            Use code <span className="text-[#3b82f6] font-black">FREE</span> at checkout!
           </p>
 
           <div className="pt-4">
@@ -61,7 +61,7 @@ export function AutoPromoPopup({ onClose }: AutoPromoPopupProps) {
           </div>
 
           <p className="text-sm text-gray-500">
-            No credit card required • Cancel anytime
+            Enter code FREE at checkout • No credit card required
           </p>
         </div>
       </div>

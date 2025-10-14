@@ -16,7 +16,7 @@ LJ Pickz is a sports betting/investing community landing page built with Next.js
 - Consistent Inter font family across all loading screen text
 - Mobile-responsive text sizing (3xl on mobile, scales to 7xl on desktop)
 - Smooth fade-out transition (700ms) between loading screen and main page
-- Auto-popup appears 5 seconds after loading completes with "7 days free" offer
+- Auto-popup appears 5 seconds after loading completes with "use code FREE at checkout" message
 - Slower loading start (800ms delay) for better pacing
 
 ## User Preferences
@@ -79,7 +79,7 @@ Preferred communication style: Simple, everyday language.
 1. Loading screen with brand reveal animation and typing effect (6.5s)
 2. Smooth fade transition to main page (700ms fade + 800ms delay)
 3. Professional hero section with high-converting CTA and credible metrics
-4. Auto-popup appears after 5 seconds with "7 days free" offer
+4. Auto-popup appears after 5 seconds with "use code FREE at checkout" offer
 5. Promo banner with discount code
 6. Feature highlights in card grid
 7. Results/statistics section
@@ -173,7 +173,7 @@ Preferred communication style: Simple, everyday language.
 - Clean, professional design without distracting imagery
 - Social proof: "1,000+ Active Members"
 - Clear value proposition: "Get verified picks and pro analysis from full-time experts"
-- Auto-popup appears 5 seconds after loading with "7 days free" offer
+- Auto-popup appears 5 seconds after loading with "use code FREE at checkout" message
 - Manual popup modal triggered by CTA button
 - Promo code banner for discount awareness
 
