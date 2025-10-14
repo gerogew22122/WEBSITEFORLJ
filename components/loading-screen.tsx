@@ -2,6 +2,13 @@
 
 import React, { useEffect, useState } from "react"
 import Image from "next/image"
+import { Inter } from "next/font/google"
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  weight: ["300", "400", "500", "600", "700", "900"],
+})
 
 export function LoadingScreen({ onComplete, fadeOut = false }: { onComplete: () => void; fadeOut?: boolean }) {
   const [stage, setStage] = useState(0)
@@ -36,7 +43,7 @@ export function LoadingScreen({ onComplete, fadeOut = false }: { onComplete: () 
   }, [stage])
 
   return (
-    <div className={`fixed inset-0 z-50 flex items-center justify-center bg-black overflow-hidden transition-opacity duration-700 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}>
+    <div className={`fixed inset-0 z-50 flex items-center justify-center bg-black overflow-hidden transition-opacity duration-700 font-sans ${fadeOut ? 'opacity-0' : 'opacity-100'}`}>
       <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0a0f1e] to-black">
         <div
           className="absolute inset-0"
@@ -90,9 +97,9 @@ export function LoadingScreen({ onComplete, fadeOut = false }: { onComplete: () 
                 : stage >= 3
                   ? "opacity-0 -translate-y-20"
                   : "opacity-0 translate-y-10"
-            }`}
+            } ${inter.variable}`}
             style={{
-              fontFamily: "var(--font-inter), sans-serif",
+              fontFamily: "var(--font-inter), Inter, -apple-system, BlinkMacSystemFont, sans-serif",
               letterSpacing: "0.02em",
               textShadow: "0 2px 40px rgba(0,0,0,0.8)",
               minHeight: "120px",
@@ -111,9 +118,9 @@ export function LoadingScreen({ onComplete, fadeOut = false }: { onComplete: () 
             }}
           >
             <h2
-              className="font-black text-[6rem] sm:text-[8rem] md:text-[12rem] lg:text-[16rem] leading-none bg-gradient-to-b from-[#93c5fd] via-[#3b82f6] to-[#1e40af] bg-clip-text text-transparent"
+              className={`font-black text-[6rem] sm:text-[8rem] md:text-[12rem] lg:text-[16rem] leading-none bg-gradient-to-b from-[#93c5fd] via-[#3b82f6] to-[#1e40af] bg-clip-text text-transparent ${inter.variable}`}
               style={{
-                fontFamily: "var(--font-inter), sans-serif",
+                fontFamily: "var(--font-inter), Inter, -apple-system, BlinkMacSystemFont, sans-serif",
                 letterSpacing: "0.05em",
                 textShadow: "0 0 80px rgba(59,130,246,0.6)",
                 WebkitTextStroke: "2px rgba(59,130,246,0.2)",
