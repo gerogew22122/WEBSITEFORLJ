@@ -35,7 +35,7 @@ export function Hero({ onStartClick }: HeroProps) {
                     alt="LeBron James"
                     width={400}
                     height={600}
-                    className="w-48 h-auto md:w-64 lg:w-80 object-contain drop-shadow-[0_0_60px_rgba(59,130,246,0.8)] opacity-80 animate-float grayscale"
+                    className="w-48 h-auto md:w-64 lg:w-80 object-contain opacity-80 animate-float grayscale"
                     priority
                   />
                 </div>
@@ -51,7 +51,7 @@ export function Hero({ onStartClick }: HeroProps) {
                     alt="Horse Racing"
                     width={500}
                     height={400}
-                    className="w-56 h-auto md:w-72 lg:w-96 object-contain drop-shadow-[0_0_60px_rgba(16,185,129,0.8)] opacity-80 animate-float grayscale"
+                    className="w-56 h-auto md:w-72 lg:w-96 object-contain opacity-80 animate-float grayscale"
                     style={{ animationDelay: "0.5s" }}
                     priority
                   />
