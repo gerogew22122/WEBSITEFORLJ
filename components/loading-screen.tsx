@@ -29,7 +29,7 @@ export function LoadingScreen({ onComplete, fadeOut = false }: { onComplete: () 
         } else {
           clearInterval(typingInterval)
         }
-      }, 70) // Typing speed (slower)
+      }, 45) // Typing speed - completes in ~2.5s
 
       return () => clearInterval(typingInterval)
     }
@@ -84,7 +84,7 @@ export function LoadingScreen({ onComplete, fadeOut = false }: { onComplete: () 
 
         <div className="space-y-8">
           <h1
-            className={`font-light tracking-wide text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-white transition-all duration-1000 leading-tight px-4 ${
+            className={`font-inter font-light tracking-wide text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-white transition-all duration-1000 leading-tight px-4 ${
               stage >= 2 && stage < 3
                 ? "opacity-100 translate-y-0"
                 : stage >= 3
@@ -92,8 +92,6 @@ export function LoadingScreen({ onComplete, fadeOut = false }: { onComplete: () 
                   : "opacity-0 translate-y-10"
             }`}
             style={{
-              fontFamily: "'Inter', sans-serif",
-              fontWeight: 300,
               letterSpacing: "0.02em",
               textShadow: "0 2px 40px rgba(0,0,0,0.8)",
               minHeight: "120px",
@@ -112,10 +110,8 @@ export function LoadingScreen({ onComplete, fadeOut = false }: { onComplete: () 
             }}
           >
             <h2
-              className="font-black text-[6rem] sm:text-[8rem] md:text-[12rem] lg:text-[16rem] leading-none bg-gradient-to-b from-[#93c5fd] via-[#3b82f6] to-[#1e40af] bg-clip-text text-transparent"
+              className="font-inter font-black text-[6rem] sm:text-[8rem] md:text-[12rem] lg:text-[16rem] leading-none bg-gradient-to-b from-[#93c5fd] via-[#3b82f6] to-[#1e40af] bg-clip-text text-transparent"
               style={{
-                fontFamily: "'Inter', sans-serif",
-                fontWeight: 900,
                 letterSpacing: "0.05em",
                 textShadow: "0 0 80px rgba(59,130,246,0.6)",
                 WebkitTextStroke: "2px rgba(59,130,246,0.2)",

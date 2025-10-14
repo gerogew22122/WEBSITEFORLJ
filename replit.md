@@ -12,7 +12,8 @@ LJ Pickz is a sports betting/investing community landing page built with Next.js
 - Implemented centralized vertical layout with clear hierarchy
 - Added credible metrics: "Verified 72% Win Rate" and "Since 2021"
 - Dual CTA buttons: "Start Free Trial" (primary) and "See Our Results" (secondary)
-- Enhanced loading screen with typing effect (70ms per character)
+- Enhanced loading screen with typing effect (45ms per character)
+- Consistent Inter font family across all loading screen text
 - Mobile-responsive text sizing (3xl on mobile, scales to 7xl on desktop)
 - Smooth fade-out transition (700ms) between loading screen and main page
 - Slower loading start (800ms delay) for better pacing
@@ -60,7 +61,7 @@ Preferred communication style: Simple, everyday language.
 
 **Animation Strategy:**
 - Multi-stage loading screen with typing effect and timed transitions (6.5s total)
-- Typing animation at 70ms per character for smooth text reveal
+- Typing animation at 45ms per character with consistent Inter font
 - Fade-out transition (700ms + 800ms delay) to main page
 - CSS-based animations for performance (transform, opacity)
 - Clean gradient backgrounds with subtle blue accent glow
