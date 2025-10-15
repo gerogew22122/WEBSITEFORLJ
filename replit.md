@@ -6,6 +6,19 @@ LJ Pickz is a sports betting/investing community landing page built with Next.js
 
 ## Recent Changes
 
+**October 15, 2025 - Navigation Updates & Reviews Page:**
+- Removed "LJ Pickz" text from next to the logo in navigation
+- Made logo clickable to return to home page
+- Added "Packages" link to navigation that scrolls to #pricing section
+- Added "Reviews" link to navigation that goes to /reviews page
+- Removed "Start Free Trial" button from top right corner of navigation
+- Changed 7-day trial price from $34.44 to $34.99
+- Added hover effect to 7-day trial card (transform scale-105) matching monthly plan
+- Created new /reviews page featuring verified Whop reviews
+- Reviews page displays 4 verified customer testimonials with 5-star ratings
+- Professional card layout with gradient avatars and timeframes
+- Navigation now has: Home, Packages, Reviews
+
 **October 15, 2025 - Hero Section Redesign, Loading Screen & Conversion Optimization:**
 - Completely redesigned hero section for professional, credible appearance
 - Removed competing celebrity visuals (LeBron, horse) for cleaner focus
