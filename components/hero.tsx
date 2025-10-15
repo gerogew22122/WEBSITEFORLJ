@@ -18,32 +18,6 @@ export function Hero({ onStartClick }: HeroProps) {
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#3b82f6] rounded-full blur-[120px]" />
       </div>
 
-      {/* Left Phone */}
-      <div className="absolute left-4 md:left-12 lg:left-20 top-1/2 -translate-y-1/2 hidden lg:block z-0">
-        <div className="relative w-48 xl:w-56 rounded-[2rem] overflow-hidden border-4 border-gray-700/50 shadow-2xl bg-black">
-          <Image
-            src="/discord-bet-1.png"
-            alt="Discord Bet"
-            width={300}
-            height={400}
-            className="w-full h-auto"
-          />
-        </div>
-      </div>
-
-      {/* Right Phone */}
-      <div className="absolute right-4 md:right-12 lg:right-20 top-1/2 -translate-y-1/2 hidden lg:block z-0">
-        <div className="relative w-48 xl:w-56 rounded-[2rem] overflow-hidden border-4 border-gray-700/50 shadow-2xl bg-black">
-          <Image
-            src="/discord-bet-2.png"
-            alt="Discord Bet"
-            width={300}
-            height={400}
-            className="w-full h-auto"
-          />
-        </div>
-      </div>
-
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto text-center">
         {/* Logo */}

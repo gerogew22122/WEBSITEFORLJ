@@ -6,7 +6,7 @@ LJ Pickz is a sports betting/investing community landing page built with Next.js
 
 ## Recent Changes
 
-**October 14, 2025 - Hero Section Redesign, Loading Screen & Conversion Optimization:**
+**October 15, 2025 - Hero Section Redesign, Loading Screen & Conversion Optimization:**
 - Completely redesigned hero section for professional, credible appearance
 - Removed competing celebrity visuals (LeBron, horse) for cleaner focus
 - Implemented centralized vertical layout with clear hierarchy
@@ -20,6 +20,8 @@ LJ Pickz is a sports betting/investing community landing page built with Next.js
 - Removed promo banner component
 - Added Whop logo with "4.7 Stars on Whop" rating to social proof
 - Social proof displays: 1,000+ Active Members (Discord), 4.7 Stars on Whop, Since 2021
+- Updated value proposition: "Get inside sport and racing picks and pro analysis from full time experts"
+- Cleaned up unused assets (lebron-hero.png 2.4MB, horse-racing-hero.png 1.5MB, Discord bet screenshots)
 
 ## User Preferences
 
