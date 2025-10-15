@@ -12,8 +12,9 @@ LJ Pickz is a sports betting/investing community landing page built with Next.js
 - Added "Packages" link to navigation that scrolls to #pricing section
 - Added "Reviews" link to navigation that goes to /reviews page
 - Removed "Start Free Trial" button from top right corner of navigation
-- Changed 7-day trial price from $34.44 to $34.99
-- Added hover effect to 7-day trial card (transform scale-105) matching monthly plan
+- Changed pricing from 7-day trial to Weekly plan at $34.99
+- Added hover effect to weekly plan card (transform scale-105) matching monthly plan
+- Updated plan descriptions to focus on daily tips and benefits
 - Created new /reviews page featuring verified Whop reviews
 - Reviews page displays 4 verified customer testimonials with 5-star ratings
 - Professional card layout with gradient avatars and timeframes
@@ -38,7 +39,9 @@ LJ Pickz is a sports betting/investing community landing page built with Next.js
 - Updated value proposition: "Get inside sport and racing picks and pro analysis from full time experts"
 - Cleaned up unused assets (lebron-hero.png 2.4MB, horse-racing-hero.png 1.5MB, Discord bet screenshots)
 - Removed Features, Results, and Reviews sections for cleaner, more focused landing page
-- Added Pricing section with two packages: 7-day trial ($34.44) and Monthly ($119.99 with money-back guarantee)
+- Added Pricing section with two packages: Weekly ($34.99) and Monthly ($119.99 with money-back guarantee)
+- Weekly package: Daily tips, Discord access, Exclusive info, 7 day free trial, Cancel anytime
+- Monthly package: Same as weekly plus "Guaranteed profit or 100% refund"
 - Monthly package highlighted as "MOST VALUE" with profit guarantee messaging
 - Navigation simplified to "Home" only
 - All CTA buttons and popups now scroll to pricing section on same page

@@ -17,11 +17,11 @@ export function Pricing() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {/* 7 Day Trial Package */}
+          {/* Weekly Package */}
           <div className="bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] border border-gray-800 rounded-2xl p-8 hover:border-[#3b82f6]/50 transition-all duration-300 transform hover:scale-105">
             <div className="text-center mb-6">
               <h3 className="text-2xl font-bebas font-black text-white mb-2">
-                7 DAY TRIAL
+                WEEKLY
               </h3>
               <div className="flex items-baseline justify-center gap-2 mb-4">
                 <span className="text-5xl font-black text-white">$34.99</span>
@@ -32,19 +32,23 @@ export function Pricing() {
             <ul className="space-y-4 mb-8">
               <li className="flex items-center gap-3 text-gray-300">
                 <Check className="h-5 w-5 text-[#3b82f6] flex-shrink-0" />
-                <span>7 days of premium picks</span>
+                <span>Daily horse racing and sport tips</span>
               </li>
               <li className="flex items-center gap-3 text-gray-300">
                 <Check className="h-5 w-5 text-[#3b82f6] flex-shrink-0" />
-                <span>Full Discord access</span>
+                <span>Discord community access</span>
               </li>
               <li className="flex items-center gap-3 text-gray-300">
                 <Check className="h-5 w-5 text-[#3b82f6] flex-shrink-0" />
-                <span>Expert analysis & data</span>
+                <span>Exclusive insider info</span>
               </li>
               <li className="flex items-center gap-3 text-gray-300">
                 <Check className="h-5 w-5 text-[#3b82f6] flex-shrink-0" />
-                <span>Global coverage</span>
+                <span>7 day free trial</span>
+              </li>
+              <li className="flex items-center gap-3 text-gray-300">
+                <Check className="h-5 w-5 text-[#3b82f6] flex-shrink-0" />
+                <span>Cancel anytime</span>
               </li>
             </ul>
 
@@ -53,7 +57,7 @@ export function Pricing() {
               asChild
             >
               <a href="https://whop.com/lj-pickz/" target="_blank" rel="noopener noreferrer">
-                Start 7 Day Trial
+                Start weekly plan
               </a>
             </Button>
           </div>
@@ -82,15 +86,11 @@ export function Pricing() {
             <ul className="space-y-4 mb-8">
               <li className="flex items-center gap-3 text-gray-300">
                 <Check className="h-5 w-5 text-[#3b82f6] flex-shrink-0" />
-                <span>Everything in 7 Day Trial</span>
+                <span>Daily horse racing and sport tips</span>
               </li>
               <li className="flex items-center gap-3 text-gray-300">
                 <Check className="h-5 w-5 text-[#3b82f6] flex-shrink-0" />
-                <span>Guaranteed profit or refund</span>
-              </li>
-              <li className="flex items-center gap-3 text-gray-300">
-                <Check className="h-5 w-5 text-[#3b82f6] flex-shrink-0" />
-                <span>Priority support</span>
+                <span>Discord community access</span>
               </li>
               <li className="flex items-center gap-3 text-gray-300">
                 <Check className="h-5 w-5 text-[#3b82f6] flex-shrink-0" />
@@ -98,7 +98,15 @@ export function Pricing() {
               </li>
               <li className="flex items-center gap-3 text-gray-300">
                 <Check className="h-5 w-5 text-[#3b82f6] flex-shrink-0" />
+                <span>7 day free trial</span>
+              </li>
+              <li className="flex items-center gap-3 text-gray-300">
+                <Check className="h-5 w-5 text-[#3b82f6] flex-shrink-0" />
                 <span>Cancel anytime</span>
+              </li>
+              <li className="flex items-center gap-3 text-gray-300">
+                <Check className="h-5 w-5 text-[#3b82f6] flex-shrink-0" />
+                <span>Guaranteed profit or 100% refund</span>
               </li>
             </ul>
 
@@ -107,7 +115,7 @@ export function Pricing() {
               asChild
             >
               <a href="https://whop.com/lj-pickz/" target="_blank" rel="noopener noreferrer">
-                Get Monthly Plan →
+                Start monthly plan
               </a>
             </Button>
           </div>
