@@ -24,19 +24,17 @@ export function Navigation() {
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2">
             <Image src="/lj-logo.png" alt="LJ Pickz" width={60} height={60} className="w-15 h-15" />
-            <span className="text-2xl font-bold text-white">LJ Pickz</span>
-          </div>
+          </Link>
 
           <div className="hidden md:flex items-center gap-8">
             <Link href="/" className="text-gray-300 hover:text-[#3b82f6] transition-colors">
               Home
             </Link>
-          </div>
-
-          <div className="flex items-center gap-4">
-            <Button className="bg-[#3b82f6] text-white hover:bg-[#2563eb] font-semibold">Start Free Trial</Button>
+            <a href="#pricing" className="text-gray-300 hover:text-[#3b82f6] transition-colors">
+              Packages
+            </a>
           </div>
         </div>
       </div>

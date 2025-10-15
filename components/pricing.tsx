@@ -18,13 +18,13 @@ export function Pricing() {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {/* 7 Day Trial Package */}
-          <div className="bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] border border-gray-800 rounded-2xl p-8 hover:border-[#3b82f6]/50 transition-all duration-300">
+          <div className="bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] border border-gray-800 rounded-2xl p-8 hover:border-[#3b82f6]/50 transition-all duration-300 transform hover:scale-105">
             <div className="text-center mb-6">
               <h3 className="text-2xl font-bebas font-black text-white mb-2">
                 7 DAY TRIAL
               </h3>
               <div className="flex items-baseline justify-center gap-2 mb-4">
-                <span className="text-5xl font-black text-white">$34.44</span>
+                <span className="text-5xl font-black text-white">$34.99</span>
               </div>
               <p className="text-gray-400">Try before you commit</p>
             </div>
