@@ -23,7 +23,9 @@ LJ Pickz is a sports betting/investing community landing page built with Next.js
 - Updated value proposition: "Get inside sport and racing picks and pro analysis from full time experts"
 - Cleaned up unused assets (lebron-hero.png 2.4MB, horse-racing-hero.png 1.5MB, Discord bet screenshots)
 - Removed Features, Results, and Reviews sections for cleaner, more focused landing page
-- Simplified page structure to: Loading Screen → Hero → Footer
+- Added Pricing section with two packages: 7-day trial ($34.44) and Monthly ($119.99 with money-back guarantee)
+- Monthly package highlighted as "MOST VALUE" with profit guarantee messaging
+- Page structure: Loading Screen → Hero → Pricing → Footer
 
 ## User Preferences
 
