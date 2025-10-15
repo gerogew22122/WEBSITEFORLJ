@@ -182,7 +182,7 @@ export function Hero({ onStartClick }: HeroProps) {
                       alt="Racing Bet"
                       width={264}
                       height={564}
-                      className="w-full h-full object-fill"
+                      className="w-full h-full object-cover"
                       priority
                     />
                     <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent pointer-events-none"></div>
