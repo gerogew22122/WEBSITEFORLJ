@@ -15,7 +15,7 @@ LJ Pickz is a sports betting/investing community landing page built with Next.js
 - Consistent Inter font family across all loading screen text (fixed using inter.className)
 - Mobile-responsive text sizing (3xl on mobile, scales to 7xl on desktop)
 - Smooth fade-out transition (700ms) between loading screen and main page
-- Auto-popup appears 5 seconds after loading with "Use code FREE at checkout!" message (no disclaimer text)
+- Auto-popup appears 5 seconds after loading with updated copy: "Get LJ Free for 7 Days! Start your free trial today — just use code FREE at checkout."
 - Slower loading start (800ms delay) for better pacing
 - Removed promo banner component
 - Added Whop logo with "4.7 Stars on Whop" rating to social proof
@@ -25,6 +25,9 @@ LJ Pickz is a sports betting/investing community landing page built with Next.js
 - Removed Features, Results, and Reviews sections for cleaner, more focused landing page
 - Added Pricing section with two packages: 7-day trial ($34.44) and Monthly ($119.99 with money-back guarantee)
 - Monthly package highlighted as "MOST VALUE" with profit guarantee messaging
+- Navigation simplified to "Home" only
+- All CTA buttons and popups now scroll to pricing section on same page
+- Created separate /packages route for dedicated pricing page
 - Page structure: Loading Screen → Hero → Pricing → Footer
 
 ## User Preferences

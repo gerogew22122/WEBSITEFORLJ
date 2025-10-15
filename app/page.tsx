@@ -42,7 +42,7 @@ export default function Home() {
         }`}
       >
         <Navigation />
-        <Hero onStartClick={() => setShowPopup(true)} />
+        <Hero />
         <Pricing />
         <Footer />
         <PromoPopup isVisible={showPopup} onClose={() => setShowPopup(false)} />

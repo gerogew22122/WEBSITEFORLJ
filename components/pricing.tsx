@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 
 export function Pricing() {
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-[#0a0a0a] to-[#0f1f3a]">
+    <section id="pricing" className="py-20 px-4 bg-gradient-to-b from-[#0a0a0a] to-[#0f1f3a]">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bebas font-black text-white mb-4">

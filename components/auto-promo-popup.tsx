@@ -52,8 +52,10 @@ export function AutoPromoPopup({ onClose }: AutoPromoPopupProps) {
               size="lg"
               className="bg-gradient-to-r from-[#3b82f6] to-[#1d4ed8] hover:from-[#2563eb] hover:to-[#1e40af] text-white font-black text-lg px-12 py-6 rounded-xl shadow-xl shadow-[#3b82f6]/50 hover:shadow-[#3b82f6]/70 transition-all duration-300 hover:scale-105 w-full"
               onClick={() => {
-                // Handle sign up
-                window.open("https://discord.gg/your-server", "_blank")
+                const pricingSection = document.getElementById('pricing')
+                if (pricingSection) {
+                  pricingSection.scrollIntoView({ behavior: 'smooth' })
+                }
               }}
             >
               CLAIM MY FREE TRIAL →

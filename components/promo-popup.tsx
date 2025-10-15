@@ -85,7 +85,13 @@ export function PromoPopup({ isVisible, onClose }: PromoPopupProps) {
             <Button
               size="lg"
               className="w-full md:w-auto bg-gradient-to-r from-[#3b82f6] to-[#10b981] text-white hover:from-[#2563eb] hover:to-[#059669] font-bold text-2xl px-12 py-8 h-auto shadow-2xl shadow-[#3b82f6]/50 hover:shadow-[#3b82f6]/70 transition-all duration-300 hover:scale-105 animate-pulse"
-              onClick={onClose}
+              onClick={() => {
+                const pricingSection = document.getElementById('pricing')
+                if (pricingSection) {
+                  pricingSection.scrollIntoView({ behavior: 'smooth' })
+                }
+                onClose()
+              }}
             >
               Claim Your Free Week Now!
             </Button>

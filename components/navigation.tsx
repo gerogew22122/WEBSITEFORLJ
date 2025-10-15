@@ -30,17 +30,8 @@ export function Navigation() {
           </div>
 
           <div className="hidden md:flex items-center gap-8">
-            <Link href="#picks" className="text-gray-300 hover:text-[#3b82f6] transition-colors">
-              Picks
-            </Link>
-            <Link href="#features" className="text-gray-300 hover:text-[#3b82f6] transition-colors">
-              Features
-            </Link>
-            <Link href="#results" className="text-gray-300 hover:text-[#3b82f6] transition-colors">
-              Results
-            </Link>
-            <Link href="#reviews" className="text-gray-300 hover:text-[#3b82f6] transition-colors">
-              Reviews
+            <Link href="/" className="text-gray-300 hover:text-[#3b82f6] transition-colors">
+              Home
             </Link>
           </div>
 
