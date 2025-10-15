@@ -17,11 +17,16 @@ export default function Home() {
   const [showAutoPopup, setShowAutoPopup] = useState(true)
 
   useEffect(() => {
-    // Check if loading screen has already been shown in this session
+    // Check if loading screen has already been shown (only skip on same-page navigation)
     const hasSeenLoading = sessionStorage.getItem('hasSeenLoading')
-    if (hasSeenLoading === 'true') {
+    const isNavigating = window.performance?.navigation?.type === 1 // 1 = reload, 0 = navigate
+    
+    if (hasSeenLoading === 'true' && !isNavigating) {
       setIsLoading(false)
       setShowContent(true)
+    } else {
+      // Clear flag on page refresh to show loading screen again
+      sessionStorage.removeItem('hasSeenLoading')
     }
   }, [])
 

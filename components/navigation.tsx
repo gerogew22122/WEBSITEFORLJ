@@ -19,11 +19,11 @@ export function Navigation() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-[#0a0a0a]/95 backdrop-blur-lg border-b border-[#1a1a1a]" : "bg-transparent"
+        isScrolled ? "bg-[#0a0a0a]/70 backdrop-blur-md border-b border-[#1a1a1a]/50" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-center gap-8">
           <Link href="/" className="flex items-center gap-2">
             <Image src="/lj-logo.png" alt="LJ Pickz" width={60} height={60} className="w-15 h-15" />
           </Link>
