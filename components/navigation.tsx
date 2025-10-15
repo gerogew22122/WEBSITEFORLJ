@@ -35,6 +35,9 @@ export function Navigation() {
             <a href="#pricing" className="text-gray-300 hover:text-[#3b82f6] transition-colors">
               Packages
             </a>
+            <Link href="/reviews" className="text-gray-300 hover:text-[#3b82f6] transition-colors">
+              Reviews
+            </Link>
           </div>
         </div>
       </div>
