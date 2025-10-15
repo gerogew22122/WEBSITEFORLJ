@@ -130,7 +130,7 @@ export function Hero({ onStartClick }: HeroProps) {
                   alt="Racing Bet"
                   width={264}
                   height={564}
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-fill"
                   priority
                 />
                 {/* Screen glass reflection */}
