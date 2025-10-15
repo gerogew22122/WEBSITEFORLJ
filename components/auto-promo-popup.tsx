@@ -40,11 +40,11 @@ export function AutoPromoPopup({ onClose }: AutoPromoPopupProps) {
           </div>
 
           <h2 className="text-3xl md:text-4xl font-bebas font-black text-white leading-tight">
-            JOIN LJ FOR 7 DAYS FREE
+            UNLOCK LJ FOR FREE FOR 7 DAYS
           </h2>
           
           <p className="text-xl text-gray-300 font-semibold">
-            Use code <span className="text-[#3b82f6] font-black">FREE</span> at checkout!
+            Use code <span className="text-[#3b82f6] font-black">FREE</span> at checkout
           </p>
 
           <div className="pt-4">
