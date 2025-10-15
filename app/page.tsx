@@ -17,6 +17,15 @@ export default function Home() {
   const [showAutoPopup, setShowAutoPopup] = useState(true)
 
   useEffect(() => {
+    // Check if loading screen has already been shown in this session
+    const hasSeenLoading = sessionStorage.getItem('hasSeenLoading')
+    if (hasSeenLoading === 'true') {
+      setIsLoading(false)
+      setShowContent(true)
+    }
+  }, [])
+
+  useEffect(() => {
     // Prevent scroll during loading
     if (isLoading) {
       document.body.style.overflow = "hidden"
@@ -30,6 +39,7 @@ export default function Home() {
     setTimeout(() => {
       setIsLoading(false)
       setShowContent(true)
+      sessionStorage.setItem('hasSeenLoading', 'true')
     }, 800)
   }
 

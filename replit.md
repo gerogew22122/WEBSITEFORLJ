@@ -18,6 +18,8 @@ LJ Pickz is a sports betting/investing community landing page built with Next.js
 - Reviews page displays 4 verified customer testimonials with 5-star ratings
 - Professional card layout with gradient avatars and timeframes
 - Navigation now has: Home, Packages, Reviews
+- Loading screen now only plays once per browser session (uses sessionStorage)
+- Clicking logo from reviews page returns to home without replaying loading animation
 
 **October 15, 2025 - Hero Section Redesign, Loading Screen & Conversion Optimization:**
 - Completely redesigned hero section for professional, credible appearance
