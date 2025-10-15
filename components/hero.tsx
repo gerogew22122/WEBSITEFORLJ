@@ -80,6 +80,66 @@ export function Hero({ onStartClick }: HeroProps) {
           </div>
         </div>
 
+        {/* 3D Phone Mockup - Right Side */}
+        <div className="hidden lg:block absolute right-[-320px] top-1/2 -translate-y-1/2" style={{ perspective: '1000px' }}>
+          <div className="relative" style={{ 
+            transform: 'rotateY(-25deg) rotateX(5deg)',
+            transformStyle: 'preserve-3d'
+          }}>
+            {/* Phone Frame with 3D depth */}
+            <div className="relative w-[280px] h-[580px] bg-gradient-to-br from-gray-800 to-gray-900 rounded-[3rem] p-3 border-[12px] border-gray-900" style={{
+              boxShadow: `
+                0 50px 100px -20px rgba(0, 0, 0, 0.8),
+                0 30px 60px -30px rgba(0, 0, 0, 0.6),
+                20px 0 40px -10px rgba(0, 0, 0, 0.4),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.05)
+              `
+            }}>
+              {/* Power Button - Left Side (mirrored) */}
+              <div className="absolute left-0 top-[180px] w-1 h-20 bg-gradient-to-r from-gray-600 to-gray-800 rounded-l-sm -translate-x-[13px]" style={{
+                transform: 'translateZ(6px)',
+                boxShadow: '-2px 0 4px rgba(0,0,0,0.5)'
+              }}></div>
+
+              {/* Side Buttons - Right Side (mirrored) */}
+              {/* Volume Up */}
+              <div className="absolute right-0 top-[140px] w-1 h-14 bg-gradient-to-l from-gray-600 to-gray-800 rounded-r-sm translate-x-[13px]" style={{
+                transform: 'translateZ(6px)',
+                boxShadow: '2px 0 4px rgba(0,0,0,0.5)'
+              }}></div>
+              {/* Volume Down */}
+              <div className="absolute right-0 top-[210px] w-1 h-14 bg-gradient-to-l from-gray-600 to-gray-800 rounded-r-sm translate-x-[13px]" style={{
+                transform: 'translateZ(6px)',
+                boxShadow: '2px 0 4px rgba(0,0,0,0.5)'
+              }}></div>
+              {/* Silent Switch */}
+              <div className="absolute right-0 top-[90px] w-1 h-8 bg-gradient-to-l from-gray-600 to-gray-800 rounded-r-sm translate-x-[13px]" style={{
+                transform: 'translateZ(6px)',
+                boxShadow: '2px 0 4px rgba(0,0,0,0.5)'
+              }}></div>
+
+              {/* Phone Notch */}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-7 bg-black rounded-b-3xl z-10"></div>
+              
+              {/* Phone Screen with glow */}
+              <div className="relative w-full h-full bg-[#1a1a1a] rounded-[2.3rem] overflow-hidden" style={{
+                boxShadow: 'inset 0 0 20px rgba(59, 130, 246, 0.3)'
+              }}>
+                <Image
+                  src="/racing-bet.png"
+                  alt="Racing Bet"
+                  width={264}
+                  height={564}
+                  className="w-full h-full object-contain"
+                  priority
+                />
+                {/* Screen glass reflection */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent pointer-events-none"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Main Content - Center */}
         <div className="text-center px-4 lg:px-20">
           {/* Logo */}
