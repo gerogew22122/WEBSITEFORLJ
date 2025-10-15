@@ -28,9 +28,13 @@ LJ Pickz is a sports betting/investing community landing page built with Next.js
 - Navigation simplified to "Home" only
 - All CTA buttons and popups now scroll to pricing section on same page
 - Created separate /packages route for dedicated pricing page
-- Added phone mockup on left side of hero section displaying live Discord bet screenshot
+- Added 3D phone mockup on left side of hero section displaying live Discord bet screenshot
 - Phone mockup visible on desktop (lg breakpoint and above) with realistic iPhone design
-- Page structure: Loading Screen → Hero (with Phone Mockup) → Pricing → Footer
+- 3D perspective with 25deg Y-rotation and 5deg X-rotation for depth effect
+- Physical side buttons: volume up, volume down, silent switch (left), power button (right)
+- Enhanced with multi-layer shadows, screen glow, and glass reflection effect
+- Positioned at left-[-320px] to prevent text overlap
+- Page structure: Loading Screen → Hero (with 3D Phone Mockup) → Pricing → Footer
 
 ## User Preferences
 
