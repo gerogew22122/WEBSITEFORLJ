@@ -164,7 +164,7 @@ export function Hero({ onStartClick }: HeroProps) {
 
         {/* Value Proposition */}
         <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto font-medium">
-          Get inside sport and racing picks and pro analysis from full time experts
+          Get insider sport and racing picks and pro analysis from full time experts
         </p>
 
         {/* CTA Button */}
