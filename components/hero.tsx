@@ -178,8 +178,8 @@ export function Hero({ onStartClick }: HeroProps) {
                     boxShadow: 'inset 0 0 20px rgba(59, 130, 246, 0.3)'
                   }}>
                     <Image
-                      src="/racing-bet.png"
-                      alt="Racing Bet"
+                      src="/large-bet-spotted.png"
+                      alt="Large Bet Spotted"
                       width={264}
                       height={564}
                       className="w-full h-full object-cover"
