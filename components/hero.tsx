@@ -80,14 +80,14 @@ export function Hero({ onStartClick }: HeroProps) {
           </div>
 
           {/* 3D Phone Mockups - Side by Side */}
-          <div className="flex items-center justify-center gap-12 mt-12">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12 mt-12 mb-20">
             {/* Left Phone - Sports Betting */}
-            <div className="hidden lg:block" style={{ perspective: '1000px' }}>
+            <div style={{ perspective: '1000px' }}>
               <div className="relative" style={{ 
                 transform: 'rotateY(15deg) rotateX(5deg)',
                 transformStyle: 'preserve-3d'
               }}>
-                <div className="relative w-[280px] h-[580px] bg-gradient-to-br from-gray-800 to-gray-900 rounded-[3rem] p-3 border-[12px] border-gray-900" style={{
+                <div className="relative w-[240px] sm:w-[280px] h-[500px] sm:h-[580px] bg-gradient-to-br from-gray-800 to-gray-900 rounded-[3rem] p-3 border-[12px] border-gray-900" style={{
                   boxShadow: `
                     0 50px 100px -20px rgba(0, 0, 0, 0.8),
                     0 30px 60px -30px rgba(0, 0, 0, 0.6),
@@ -137,12 +137,12 @@ export function Hero({ onStartClick }: HeroProps) {
             </div>
 
             {/* Right Phone - Racing Picks */}
-            <div className="hidden lg:block" style={{ perspective: '1000px' }}>
+            <div style={{ perspective: '1000px' }}>
               <div className="relative" style={{ 
                 transform: 'rotateY(-15deg) rotateX(5deg)',
                 transformStyle: 'preserve-3d'
               }}>
-                <div className="relative w-[280px] h-[580px] bg-gradient-to-br from-gray-800 to-gray-900 rounded-[3rem] p-3 border-[12px] border-gray-900" style={{
+                <div className="relative w-[240px] sm:w-[280px] h-[500px] sm:h-[580px] bg-gradient-to-br from-gray-800 to-gray-900 rounded-[3rem] p-3 border-[12px] border-gray-900" style={{
                   boxShadow: `
                     0 50px 100px -20px rgba(0, 0, 0, 0.8),
                     0 30px 60px -30px rgba(0, 0, 0, 0.6),
