@@ -25,6 +25,7 @@ export function Pricing() {
               </h3>
               <div className="flex items-baseline justify-center gap-2 mb-4">
                 <span className="text-5xl font-black text-white">$34.99</span>
+                <span className="text-gray-400">/pw</span>
               </div>
               <p className="text-gray-400">Try before you commit</p>
             </div>
