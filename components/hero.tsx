@@ -19,26 +19,51 @@ export function Hero({ onStartClick }: HeroProps) {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto text-center">
-        {/* Logo */}
-        <div className="mb-8">
-          <Image
-            src="/lj-logo.png"
-            alt="LJ Pickz"
-            width={120}
-            height={120}
-            className="w-20 h-20 md:w-28 md:h-28 mx-auto object-contain"
-            priority
-          />
+      <div className="relative z-10 max-w-7xl mx-auto">
+        {/* Phone Mockup - Left Side */}
+        <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12">
+          <div className="relative">
+            {/* Phone Frame */}
+            <div className="relative w-[280px] h-[580px] bg-black rounded-[3rem] p-3 shadow-2xl border-8 border-gray-800">
+              {/* Phone Notch */}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-7 bg-black rounded-b-3xl z-10"></div>
+              
+              {/* Phone Screen */}
+              <div className="relative w-full h-full bg-[#1a1a1a] rounded-[2.3rem] overflow-hidden">
+                <Image
+                  src="/discord-bet.png"
+                  alt="Live Bet"
+                  width={264}
+                  height={564}
+                  className="w-full h-full object-cover"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Main Headline */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bebas font-black text-white leading-tight mb-6 tracking-wide">
-          THE #1 DATA-DRIVEN{" "}
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#3b82f6] to-[#10b981] mt-2">
-            SPORTS INVESTING GROUP
-          </span>
-        </h1>
+        {/* Main Content - Center */}
+        <div className="text-center px-4 lg:px-20">
+          {/* Logo */}
+          <div className="mb-8">
+            <Image
+              src="/lj-logo.png"
+              alt="LJ Pickz"
+              width={120}
+              height={120}
+              className="w-20 h-20 md:w-28 md:h-28 mx-auto object-contain"
+              priority
+            />
+          </div>
+
+          {/* Main Headline */}
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bebas font-black text-white leading-tight mb-6 tracking-wide">
+            THE #1 DATA-DRIVEN{" "}
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#3b82f6] to-[#10b981] mt-2">
+              SPORTS INVESTING GROUP
+            </span>
+          </h1>
 
         {/* Value Proposition */}
         <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto font-medium">
@@ -62,19 +87,20 @@ export function Hero({ onStartClick }: HeroProps) {
           </Button>
         </div>
 
-        {/* Social Proof */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-gray-400">
-          <div className="flex items-center gap-2">
-            <Image src="/discord-logo.png" alt="Discord" width={24} height={24} className="w-6 h-6" />
-            <span className="font-semibold">1,000+ Active Members</span>
+          {/* Social Proof */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-gray-400">
+            <div className="flex items-center gap-2">
+              <Image src="/discord-logo.png" alt="Discord" width={24} height={24} className="w-6 h-6" />
+              <span className="font-semibold">1,000+ Active Members</span>
+            </div>
+            <div className="hidden sm:block w-px h-4 bg-gray-600" />
+            <div className="flex items-center gap-2">
+              <Image src="/whop-icon.png" alt="Whop" width={32} height={32} className="w-8 h-8" />
+              <span className="font-semibold">4.7 Stars on Whop</span>
+            </div>
+            <div className="hidden sm:block w-px h-4 bg-gray-600" />
+            <div className="font-semibold">Since 2021</div>
           </div>
-          <div className="hidden sm:block w-px h-4 bg-gray-600" />
-          <div className="flex items-center gap-2">
-            <Image src="/whop-icon.png" alt="Whop" width={32} height={32} className="w-8 h-8" />
-            <span className="font-semibold">4.7 Stars on Whop</span>
-          </div>
-          <div className="hidden sm:block w-px h-4 bg-gray-600" />
-          <div className="font-semibold">Since 2021</div>
         </div>
       </div>
     </section>
