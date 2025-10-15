@@ -2,9 +2,6 @@
 
 import { useState, useEffect } from "react"
 import { Hero } from "@/components/hero"
-import { Features } from "@/components/features"
-import { Results } from "@/components/results"
-import { Reviews } from "@/components/reviews"
 import { Footer } from "@/components/footer"
 import { Navigation } from "@/components/navigation"
 import { LoadingScreen } from "@/components/loading-screen"
@@ -45,9 +42,6 @@ export default function Home() {
       >
         <Navigation />
         <Hero onStartClick={() => setShowPopup(true)} />
-        <Features />
-        <Results />
-        <Reviews />
         <Footer />
         <PromoPopup isVisible={showPopup} onClose={() => setShowPopup(false)} />
       </div>

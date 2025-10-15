@@ -2,7 +2,7 @@
 
 ## Overview
 
-LJ Pickz is a sports betting/investing community landing page built with Next.js 15. The application serves as a marketing website for a sports picks service, featuring a professional hero section with credible messaging, animated loading screen with typing effect, feature highlights, results statistics, customer reviews, and promotional popups. The site is designed with a dark theme and emphasizes visual appeal with clean animations and professional gradient effects.
+LJ Pickz is a sports betting/investing community landing page built with Next.js 15. The application serves as a minimalist marketing website for a sports picks service, featuring a professional hero section with credible messaging, animated loading screen with typing effect, and promotional popups. The site is designed with a dark theme and emphasizes visual appeal with clean animations and professional gradient effects.
 
 ## Recent Changes
 
@@ -22,6 +22,8 @@ LJ Pickz is a sports betting/investing community landing page built with Next.js
 - Social proof displays: 1,000+ Active Members (Discord), 4.7 Stars on Whop, Since 2021
 - Updated value proposition: "Get inside sport and racing picks and pro analysis from full time experts"
 - Cleaned up unused assets (lebron-hero.png 2.4MB, horse-racing-hero.png 1.5MB, Discord bet screenshots)
+- Removed Features, Results, and Reviews sections for cleaner, more focused landing page
+- Simplified page structure to: Loading Screen → Hero → Footer
 
 ## User Preferences
 
