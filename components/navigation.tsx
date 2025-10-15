@@ -23,12 +23,12 @@ export function Navigation() {
       }`}
     >
       <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-center gap-8">
+        <div className="flex items-center justify-between relative">
           <Link href="/" className="flex items-center gap-2">
             <Image src="/lj-logo.png" alt="LJ Pickz" width={60} height={60} className="w-15 h-15" />
           </Link>
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2">
             <Link href="/" className="text-gray-300 hover:text-[#3b82f6] transition-colors">
               Home
             </Link>
