@@ -6,6 +6,23 @@ LJ Pickz is a sports betting/investing community landing page built with Next.js
 
 ## Recent Changes
 
+**October 18, 2025 - Region-Based Pricing with Geolocation:**
+- Implemented automatic geolocation detection using ipapi.co API
+- Pricing now automatically adjusts based on user's location:
+  - United Kingdom: £15.99/week, £54.99/month
+  - United States: $19.99/week, $69.99/month
+  - Australia: $34.99/week, $119.99/month
+  - Europe (27 EU countries): €18.99/week, €64.99/month
+- Each region links to correct Whop product URLs with affiliate parameter
+- Visual feedback shows detected region to user
+- Graceful fallback to US pricing if geolocation fails
+- Error handling with response.ok check for API reliability
+- Loading screen now only shows on page refresh (not on navigation)
+- Navigation bar made more translucent (70% opacity with backdrop blur)
+- Logo stays on left, navigation items centered in middle
+- Right phone mockup image updated to show Large Bet Spotted (Newton Abbot & Ascot races)
+- Fixed image aspect ratio on right phone (object-contain instead of object-cover)
+
 **October 15, 2025 - Navigation Updates & Reviews Page:**
 - Removed "LJ Pickz" text from next to the logo in navigation
 - Made logo clickable to return to home page
