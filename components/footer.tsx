@@ -8,8 +8,7 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <Image src="/lj-logo.png" alt="LJ Pickz" width={32} height={32} className="w-8 h-8" />
+            <div className="mb-4">
               <span className="text-xl font-bold text-[#3b82f6]">LJ Pickz</span>
             </div>
             <p className="text-gray-400 text-sm">The world's first insider sports investing group</p>
