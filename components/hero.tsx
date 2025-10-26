@@ -22,18 +22,6 @@ export function Hero({ onStartClick }: HeroProps) {
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Main Content - Center */}
         <div className="text-center px-4 lg:px-20">
-          {/* Logo */}
-          <div className="mb-8">
-            <Image
-              src="/lj-logo.png"
-              alt="LJ Pickz"
-              width={120}
-              height={120}
-              className="w-20 h-20 md:w-28 md:h-28 mx-auto object-contain"
-              priority
-            />
-          </div>
-
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bebas font-black text-white leading-tight mb-6 tracking-wide">
             THE #1 DATA-DRIVEN{" "}

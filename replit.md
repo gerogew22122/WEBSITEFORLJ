@@ -22,6 +22,8 @@ LJ Pickz is a sports betting/investing community landing page built with Next.js
 - Logo stays on left, navigation items centered in middle
 - Right phone mockup image updated to show Large Bet Spotted (Newton Abbot & Ascot races)
 - Fixed image aspect ratio on right phone (object-contain instead of object-cover)
+- Removed large LJ logo from hero section (goes straight to headline)
+- Removed LJ logo image from footer (text only)
 
 **October 15, 2025 - Navigation Updates & Reviews Page:**
 - Removed "LJ Pickz" text from next to the logo in navigation
