@@ -28,14 +28,14 @@ export function Navigation() {
             <Image src="/lj-logo.png" alt="LJ Pickz" width={60} height={60} className="w-15 h-15" />
           </Link>
 
-          <div className="hidden md:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2">
-            <Link href="/" className="text-gray-300 hover:text-[#3b82f6] transition-colors">
+          <div className="flex items-center gap-4 md:gap-8 absolute left-1/2 transform -translate-x-1/2">
+            <Link href="/" className="text-gray-300 hover:text-[#3b82f6] transition-colors text-sm md:text-base">
               Home
             </Link>
-            <a href="#pricing" className="text-gray-300 hover:text-[#3b82f6] transition-colors">
+            <a href="#pricing" className="text-gray-300 hover:text-[#3b82f6] transition-colors text-sm md:text-base">
               Packages
             </a>
-            <Link href="/reviews" className="text-gray-300 hover:text-[#3b82f6] transition-colors">
+            <Link href="/reviews" className="text-gray-300 hover:text-[#3b82f6] transition-colors text-sm md:text-base">
               Reviews
             </Link>
           </div>

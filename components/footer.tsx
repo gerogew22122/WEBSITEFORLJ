@@ -17,16 +17,10 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-white mb-4">Navigation</h3>
             <div className="flex flex-col gap-2">
-              <Link href="#picks" className="text-gray-400 hover:text-[#3b82f6] transition-colors text-sm">
-                Picks
-              </Link>
-              <Link href="#features" className="text-gray-400 hover:text-[#3b82f6] transition-colors text-sm">
-                Features
-              </Link>
-              <Link href="#results" className="text-gray-400 hover:text-[#3b82f6] transition-colors text-sm">
+              <a href="https://docs.google.com/spreadsheets/d/1crpxCU2XxiidMIhuX0lG7yrmZ410Qa5n-9AvSiuasmo/edit?gid=548534739#gid=548534739" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#3b82f6] transition-colors text-sm">
                 Results
-              </Link>
-              <Link href="#reviews" className="text-gray-400 hover:text-[#3b82f6] transition-colors text-sm">
+              </a>
+              <Link href="/reviews" className="text-gray-400 hover:text-[#3b82f6] transition-colors text-sm">
                 Reviews
               </Link>
             </div>

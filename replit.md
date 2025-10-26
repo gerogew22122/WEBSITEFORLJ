@@ -6,6 +6,13 @@ LJ Pickz is a sports betting/investing community landing page built with Next.js
 
 ## Recent Changes
 
+**October 26, 2025 - Navigation & Footer Updates:**
+- Navigation now visible on mobile devices (not hidden on small screens)
+- Smaller text on mobile navigation (text-sm) for better fit
+- Footer "Results" link now goes to Google Sheets results spreadsheet
+- Removed "Picks" and "Features" from footer navigation
+- Footer "Reviews" link now properly goes to /reviews page
+
 **October 18, 2025 - Region-Based Pricing with Geolocation:**
 - Implemented automatic geolocation detection using ipapi.co API
 - Pricing now automatically adjusts based on user's location:
