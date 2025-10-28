@@ -31,7 +31,7 @@ const REGION_PRICING: Record<string, RegionPricing> = {
     weeklyPrice: "$34.99",
     monthlyPrice: "$119.99",
     weeklyLink: "https://whop.com/lj-pickz-38-088a/lj-pickz-38-088a?a=ljpickzzz",
-    monthlyLink: "https://whop.com/lj-pickz-38-088a/?productId=prod_JV9eKIwPFcILX&a=ljpickzzz",
+    monthlyLink: "https://whop.com/lj-pickz-38-088a/lj-pickz-elite-monthly?a=ljpickzzz",
     currency: "AUD"
   },
   EU: {
