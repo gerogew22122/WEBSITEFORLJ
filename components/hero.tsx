@@ -11,7 +11,7 @@ export function Hero({ onStartClick }: HeroProps) {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 px-4">
       {/* Clean gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a1628] via-[#0f1f3a] to-[#0a0a0a]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0a1628] via-[#0f1f3a] to-[#0f1f3a]" />
       
       {/* Subtle accent glow */}
       <div className="absolute inset-0 opacity-20">
