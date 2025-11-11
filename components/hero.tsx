@@ -47,7 +47,7 @@ export function Hero({ onStartClick }: HeroProps) {
               }
             }}
           >
-            <span className="relative z-10 tracking-wide">🎯 GET 7 DAYS FREE NOW</span>
+            <span className="relative z-10 tracking-wide">Start For Free</span>
             <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#60a5fa] to-[#3b82f6] opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
           </Button>
         </div>
@@ -166,11 +166,11 @@ export function Hero({ onStartClick }: HeroProps) {
                     boxShadow: 'inset 0 0 20px rgba(59, 130, 246, 0.3)'
                   }}>
                     <Image
-                      src="/large-bet-spotted.png"
-                      alt="Large Bet Spotted"
+                      src="/betslip.png"
+                      alt="Bet Slip"
                       width={264}
                       height={564}
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-cover"
                       priority
                     />
                     <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent pointer-events-none"></div>
