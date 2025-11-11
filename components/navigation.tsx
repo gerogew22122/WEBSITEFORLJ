@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Link from "next/link"
+import { Instagram, Youtube } from "lucide-react"
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -37,6 +38,27 @@ export function Navigation() {
             </a>
             <a href="#pricing" className="text-gray-300 hover:text-[#3b82f6] transition-colors text-sm md:text-base">
               Packages
+            </a>
+          </div>
+
+          <div className="flex items-center gap-4">
+            <a 
+              href="https://www.instagram.com/lj_pickz/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-gray-300 hover:text-[#3b82f6] transition-colors"
+              aria-label="Instagram"
+            >
+              <Instagram className="w-5 h-5" />
+            </a>
+            <a 
+              href="https://www.youtube.com/@Ljweeklyy" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-gray-300 hover:text-[#3b82f6] transition-colors"
+              aria-label="YouTube"
+            >
+              <Youtube className="w-5 h-5" />
             </a>
           </div>
         </div>
