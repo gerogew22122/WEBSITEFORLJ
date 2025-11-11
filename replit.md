@@ -6,6 +6,14 @@ LJ Pickz is a sports betting/investing community landing page built with Next.js
 
 ## Recent Changes
 
+**November 11, 2025 - Footer Cleanup & Social Links:**
+- Removed "Legal" section from footer (Terms of Service, Privacy Policy, Contact)
+- Updated footer grid from 4 columns to 3 columns
+- Removed Facebook and Twitter social links
+- Updated Instagram link to https://www.instagram.com/lj_pickz/
+- Updated YouTube link to https://www.youtube.com/@Ljweeklyy
+- Fixed "Packages" navigation link to work from Reviews page (changed to /#pricing)
+
 **October 26, 2025 - Navigation & Footer Updates:**
 - Navigation now visible on mobile devices (not hidden on small screens)
 - Smaller text on mobile navigation (text-sm) for better fit

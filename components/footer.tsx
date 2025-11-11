@@ -1,12 +1,12 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Facebook, Twitter, Instagram, Youtube } from "lucide-react"
+import { Instagram, Youtube } from "lucide-react"
 
 export function Footer() {
   return (
     <footer className="bg-[#0a0a0a] border-t border-[#1a1a1a] py-12">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+        <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <div className="mb-4">
               <span className="text-xl font-bold text-[#3b82f6]">LJ Pickz</span>
@@ -27,35 +27,14 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="font-semibold text-white mb-4">Legal</h3>
-            <div className="flex flex-col gap-2">
-              <Link href="#" className="text-gray-400 hover:text-[#3b82f6] transition-colors text-sm">
-                Terms of Service
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-[#3b82f6] transition-colors text-sm">
-                Privacy Policy
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-[#3b82f6] transition-colors text-sm">
-                Contact
-              </Link>
-            </div>
-          </div>
-
-          <div>
             <h3 className="font-semibold text-white mb-4">Follow Us</h3>
             <div className="flex gap-4">
-              <Link href="#" className="text-gray-400 hover:text-[#3b82f6] transition-colors">
-                <Facebook className="w-5 h-5" />
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-[#3b82f6] transition-colors">
-                <Twitter className="w-5 h-5" />
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-[#3b82f6] transition-colors">
+              <a href="https://www.instagram.com/lj_pickz/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#3b82f6] transition-colors">
                 <Instagram className="w-5 h-5" />
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-[#3b82f6] transition-colors">
+              </a>
+              <a href="https://www.youtube.com/@Ljweeklyy" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#3b82f6] transition-colors">
                 <Youtube className="w-5 h-5" />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
