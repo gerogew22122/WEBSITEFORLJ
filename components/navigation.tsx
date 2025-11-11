@@ -32,12 +32,12 @@ export function Navigation() {
             <Link href="/" className="text-gray-300 hover:text-[#3b82f6] transition-colors text-sm md:text-base">
               Home
             </Link>
-            <a href="/#pricing" className="text-gray-300 hover:text-[#3b82f6] transition-colors text-sm md:text-base">
+            <a href="#reviews" className="text-gray-300 hover:text-[#3b82f6] transition-colors text-sm md:text-base">
+              Reviews
+            </a>
+            <a href="#pricing" className="text-gray-300 hover:text-[#3b82f6] transition-colors text-sm md:text-base">
               Packages
             </a>
-            <Link href="/reviews" className="text-gray-300 hover:text-[#3b82f6] transition-colors text-sm md:text-base">
-              Reviews
-            </Link>
           </div>
         </div>
       </div>

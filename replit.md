@@ -1,7 +1,7 @@
 # LJ Pickz Landing Page
 
 ## Overview
-LJ Pickz is a minimalist marketing landing page for a sports picks service, built with Next.js 15. Its primary purpose is to attract and convert users through a professional, visually appealing, and high-converting website. The application features a dark theme, an animated loading screen with a typing effect, and promotional popups. It integrates region-based dynamic pricing and showcases customer reviews in a carousel, aiming to establish credibility and drive subscriptions to the sports betting/investing community.
+LJ Pickz is a minimalist marketing landing page for a sports picks service, built with Next.js 15. Its primary purpose is to attract and convert users through a professional, visually appealing, and high-converting website. The application features a dark theme, an animated loading screen with a typing effect, and promotional popups. It integrates region-based dynamic pricing and showcases customer reviews in a carousel positioned between the hero section and pricing. The single-page design includes smooth-scrolling navigation to Reviews and Packages sections, aiming to establish credibility and drive subscriptions to the sports betting/investing community.
 
 ## User Preferences
 Preferred communication style: Simple, everyday language.

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Hero } from "@/components/hero"
+import { Reviews } from "@/components/reviews"
 import { Pricing } from "@/components/pricing"
 import { Footer } from "@/components/footer"
 import { Navigation } from "@/components/navigation"
@@ -58,6 +59,7 @@ export default function Home() {
       >
         <Navigation />
         <Hero />
+        <Reviews />
         <Pricing />
         <Footer />
         <PromoPopup isVisible={showPopup} onClose={() => setShowPopup(false)} />
