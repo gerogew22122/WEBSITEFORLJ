@@ -201,9 +201,16 @@ export function Reviews() {
         </div>
 
         <div className="mt-12 text-center">
-          <div className="inline-block bg-gradient-to-r from-[#3b82f6]/20 to-[#2563eb]/20 border border-[#3b82f6]/30 rounded-lg px-6 py-4">
+          <div className="inline-flex items-center gap-3 bg-gradient-to-r from-[#3b82f6]/20 to-[#2563eb]/20 border border-[#3b82f6]/30 rounded-lg px-6 py-4">
+            <Image 
+              src="/whop-logo.png" 
+              alt="Whop" 
+              width={28} 
+              height={28}
+              className="w-7 h-7"
+            />
             <p className="text-[#3b82f6] font-semibold">
-              ⭐ All reviews verified through Whop platform
+              All reviews verified through Whop platform
             </p>
           </div>
         </div>
