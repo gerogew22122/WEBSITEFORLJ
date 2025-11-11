@@ -1,283 +1,65 @@
 # LJ Pickz Landing Page
 
 ## Overview
-
-LJ Pickz is a sports betting/investing community landing page built with Next.js 15. The application serves as a minimalist marketing website for a sports picks service, featuring a professional hero section with credible messaging, animated loading screen with typing effect, and promotional popups. The site is designed with a dark theme and emphasizes visual appeal with clean animations and professional gradient effects.
-
-## Recent Changes
-
-**November 11, 2025 - Footer Cleanup & Social Links:**
-- Removed "Legal" section from footer (Terms of Service, Privacy Policy, Contact)
-- Updated footer grid from 4 columns to 3 columns
-- Removed Facebook and Twitter social links
-- Updated Instagram link to https://www.instagram.com/lj_pickz/
-- Updated YouTube link to https://www.youtube.com/@Ljweeklyy
-- Fixed "Packages" navigation link to work from Reviews page (changed to /#pricing)
-
-**October 26, 2025 - Navigation & Footer Updates:**
-- Navigation now visible on mobile devices (not hidden on small screens)
-- Smaller text on mobile navigation (text-sm) for better fit
-- Footer "Results" link now goes to Google Sheets results spreadsheet
-- Removed "Picks" and "Features" from footer navigation
-- Footer "Reviews" link now properly goes to /reviews page
-
-**October 18, 2025 - Region-Based Pricing with Geolocation:**
-- Implemented automatic geolocation detection using ipapi.co API
-- Pricing now automatically adjusts based on user's location:
-  - United Kingdom: £15.99/week, £54.99/month
-  - United States: $19.99/week, $69.99/month
-  - Australia: $34.99/week, $119.99/month
-  - Europe (27 EU countries): €18.99/week, €64.99/month
-- Each region links to correct Whop product URLs with affiliate parameter
-- Visual feedback shows detected region to user
-- Graceful fallback to US pricing if geolocation fails
-- Error handling with response.ok check for API reliability
-- Loading screen now only shows on page refresh (not on navigation)
-- Navigation bar made more translucent (70% opacity with backdrop blur)
-- Logo stays on left, navigation items centered in middle
-- Right phone mockup image updated to show Large Bet Spotted (Newton Abbot & Ascot races)
-- Fixed image aspect ratio on right phone (object-contain instead of object-cover)
-- Removed large LJ logo from hero section (goes straight to headline)
-- Removed LJ logo image from footer (text only)
-
-**October 15, 2025 - Navigation Updates & Reviews Page:**
-- Removed "LJ Pickz" text from next to the logo in navigation
-- Made logo clickable to return to home page
-- Added "Packages" link to navigation that scrolls to #pricing section
-- Added "Reviews" link to navigation that goes to /reviews page
-- Removed "Start Free Trial" button from top right corner of navigation
-- Changed pricing from 7-day trial to Weekly plan at $34.99
-- Added hover effect to weekly plan card (transform scale-105) matching monthly plan
-- Updated plan descriptions to focus on daily tips and benefits
-- Created new /reviews page featuring verified Whop reviews
-- Reviews page displays 4 verified customer testimonials with 5-star ratings
-- Professional card layout with gradient avatars and timeframes
-- Navigation now has: Home, Packages, Reviews
-- Loading screen now only plays once per browser session (uses sessionStorage)
-- Clicking logo from reviews page returns to home without replaying loading animation
-
-**October 15, 2025 - Hero Section Redesign, Loading Screen & Conversion Optimization:**
-- Completely redesigned hero section for professional, credible appearance
-- Removed competing celebrity visuals (LeBron, horse) for cleaner focus
-- Implemented centralized vertical layout with clear hierarchy
-- High-converting CTA button: "🎯 GET 7 DAYS FREE NOW" with gradient, pulse animation
-- Enhanced loading screen with typing effect (45ms per character)
-- Consistent Inter font family across all loading screen text (fixed using inter.className)
-- Mobile-responsive text sizing (3xl on mobile, scales to 7xl on desktop)
-- Smooth fade-out transition (700ms) between loading screen and main page
-- Auto-popup appears 5 seconds after loading with updated copy: "Get LJ Free for 7 Days! Start your free trial today — just use code FREE at checkout."
-- Slower loading start (800ms delay) for better pacing
-- Removed promo banner component
-- Added Whop logo with "4.7 Stars on Whop" rating to social proof
-- Social proof displays: 1,000+ Active Members (Discord), 4.7 Stars on Whop, Since 2021
-- Updated value proposition: "Get inside sport and racing picks and pro analysis from full time experts"
-- Cleaned up unused assets (lebron-hero.png 2.4MB, horse-racing-hero.png 1.5MB, Discord bet screenshots)
-- Removed Features, Results, and Reviews sections for cleaner, more focused landing page
-- Added Pricing section with two packages: Weekly ($34.99) and Monthly ($119.99 with money-back guarantee)
-- Weekly package: Daily tips, Discord access, Exclusive info, 7 day free trial, Cancel anytime
-- Monthly package: Same as weekly plus "Guaranteed profit or 100% refund"
-- Monthly package highlighted as "MOST VALUE" with profit guarantee messaging
-- Navigation simplified to "Home" only
-- All CTA buttons and popups now scroll to pricing section on same page
-- Created separate /packages route for dedicated pricing page
-- Added dual 3D phone mockups below social proof section, above pricing
-- Left phone: Discord sports bet screenshot
-- Right phone: Large bet spotted screenshot (Wolverhampton & Navan races)
-- Responsive design: compact (160px) side-by-side on mobile, medium (240px) on tablet, large (280px) spread out on desktop
-- Mobile: 4px gap between phones, Desktop: 20px gap for spread-out effect
-- 3D perspective with 15deg Y-rotation and 5deg X-rotation for depth effect
-- Physical side buttons: volume up, volume down, silent switch, power button
-- Enhanced with multi-layer shadows, screen glow, and glass reflection effect
-- Bottom margin (mb-20) to prevent cut-off on full screen
-- Page structure: Loading Screen → Hero → Social Proof → Dual 3D Phone Mockups → Pricing → Footer
+LJ Pickz is a minimalist marketing landing page for a sports picks service, built with Next.js 15. Its primary purpose is to attract and convert users through a professional, visually appealing, and high-converting website. The application features a dark theme, an animated loading screen with a typing effect, and promotional popups. It integrates region-based dynamic pricing and showcases customer reviews in a carousel, aiming to establish credibility and drive subscriptions to the sports betting/investing community.
 
 ## User Preferences
-
 Preferred communication style: Simple, everyday language.
 
 ## System Architecture
 
 ### Frontend Architecture
-
-**Framework:** Next.js 15 with App Router
-- Uses React Server Components (RSC) architecture
-- Client-side interactivity handled with "use client" directive
-- Pages are built as React components in the `app` directory
-
-**UI Component Library:** shadcn/ui with Radix UI primitives
-- Custom theme configuration using "new-york" style
-- Components use Tailwind CSS with CSS variables for theming
-- Icon library: Lucide React
-
-**Styling:** Tailwind CSS with custom configuration
-- Uses OKLCH color space for better color management
-- Dark mode as default theme
-- Custom CSS variables defined in `globals.css`
-- Animated elements using custom CSS animations and tw-animate-css
-
-**State Management:** React hooks (useState, useEffect)
-- Local component state for UI interactions
-- No global state management library (Redux, Zustand, etc.)
-- Loading states and popup visibility managed at page level
-
-**Typography:** Custom font configuration
-- Inter: Primary sans-serif font (weights: 300-900)
-- Bebas Neue: Display font for headings
+The application is built with Next.js 15 using the App Router and React Server Components (RSC). Client-side interactivity uses the "use client" directive. UI components are developed with shadcn/ui and Radix UI primitives, styled using Tailwind CSS with a custom dark theme and OKLCH color space. Animations are handled with custom CSS and `tw-animate-css`. State management primarily uses React hooks (useState, useEffect) for local component state. Typography utilizes Inter for body text and Bebas Neue for display headings.
 
 ### Key Design Patterns
 
-**Component Structure:**
-- Modular component architecture with single-responsibility components
-- Components organized by feature (hero, navigation, features, etc.)
-- Shared UI components in `components/ui` directory
-- Business logic components in root `components` directory
+**Component Structure:** Modular, single-responsibility components organized by feature, with shared UI components in `components/ui`.
 
-**Animation Strategy:**
-- Multi-stage loading screen with typing effect and timed transitions (6.5s total)
-- Typing animation at 45ms per character with consistent Inter font
-- Fade-out transition (700ms + 800ms delay) to main page
-- CSS-based animations for performance (transform, opacity)
-- Clean gradient backgrounds with subtle blue accent glow
-- Scroll-based navigation state changes
+**Animation Strategy:** Features a multi-stage loading screen with a typing effect and timed transitions (6.5s total), including a smooth fade-out. CSS-based animations are prioritized for performance.
 
-**Responsive Design:**
-- Mobile-first approach with Tailwind breakpoints (sm, md, lg)
-- Text scales appropriately across devices (3xl → 7xl for headlines)
-- Loading screen text optimized for mobile viewports
-- Clean, centered layouts that work on all screen sizes
-- No competing visuals - focus on content and clarity
+**Responsive Design:** Adopts a mobile-first approach using Tailwind breakpoints, ensuring text and layouts scale appropriately across all devices.
 
-**User Flow:**
-1. Loading screen with brand reveal animation and typing effect (6.5s)
-2. Smooth fade transition to main page (700ms fade + 800ms delay)
-3. Professional hero section with high-converting CTA and credible metrics
-4. Auto-popup appears after 5 seconds with "use code FREE at checkout" offer
-5. Promo banner with discount code
-6. Feature highlights in card grid
-7. Results/statistics section
-8. Customer reviews
-9. Footer with navigation and social links
-10. Manual promotional popup triggered by CTA button click
+**User Flow:** The user experience begins with a loading screen, transitions to a professional hero section with a high-converting CTA and social proof, followed by an auto-popup offering a free trial, feature highlights, and customer reviews. Navigation is streamlined to "Home", "Packages", and "Reviews".
 
 ### Performance Considerations
+Next.js Image component is used for image optimization, with priority loading for hero images. Code splitting is handled automatically by Next.js App Router, and metadata is configured for SEO.
 
-**Image Optimization:**
-- Next.js Image component for automatic optimization
-- Priority loading for hero images
-- Lazy loading for below-fold content
-
-**Code Splitting:**
-- Automatic code splitting via Next.js App Router
-- Suspense boundaries for loading states
-- Dynamic imports where appropriate
-
-**SEO:**
-- Metadata configuration in layout.tsx
-- Semantic HTML structure
-- Proper heading hierarchy
+### Notable Architecture Decisions
+**No Backend/Database:** The current implementation is a static landing page with no server-side data fetching, API routes, or database integration; content is hardcoded.
+**Dark Theme Default:** The application defaults to a dark theme with professional navy-to-black gradient backgrounds.
+**Professional UX Design:** Emphasizes a polished user experience through animated loading screens, smooth transitions, and scroll prevention during loading.
+**Credible Messaging & Conversion Focus:** The design focuses on credibility with social proof, clear value propositions, and high-converting CTAs, including an auto-popup and promo code banners.
+**Region-Based Pricing:** Implements automatic geolocation detection (using `ipapi.co`) to display localized pricing (GBP, USD, AUD, EUR) and links to the correct Whop product URLs.
 
 ## External Dependencies
 
 ### Core Framework
-- **Next.js 15.2.4:** React framework with App Router, Server Components, and Image optimization
-- **React 18+:** UI library (implied by Next.js 15)
-- **TypeScript:** Type safety throughout the application
+*   **Next.js 15.2.4:** React framework.
+*   **React 18+:** UI library.
+*   **TypeScript:** For type safety.
 
 ### UI Libraries
-- **Radix UI:** Headless UI component primitives (@radix-ui/react-*)
-  - Accordion, Alert Dialog, Avatar, Checkbox, Dialog, Dropdown Menu
-  - Label, Navigation Menu, Popover, Progress, Radio Group
-  - Scroll Area, Select, Separator, Slider, Switch, Tabs, Toast, Tooltip
-- **shadcn/ui:** Pre-built component patterns using Radix UI
-- **Lucide React:** Icon library for UI elements
+*   **Radix UI:** Headless UI component primitives (e.g., Accordion, Dialog, Dropdown Menu).
+*   **shadcn/ui:** Pre-built component patterns.
+*   **Lucide React:** Icon library.
 
 ### Styling
-- **Tailwind CSS:** Utility-first CSS framework
-- **tw-animate-css:** Animation utilities for Tailwind
-- **class-variance-authority:** Type-safe component variants
-- **clsx + tailwind-merge:** Class name merging utilities
+*   **Tailwind CSS:** Utility-first CSS framework.
+*   **tw-animate-css:** Animation utilities.
+*   **class-variance-authority:** Type-safe component variants.
+*   **clsx + tailwind-merge:** Class name merging.
 
 ### Form Handling
-- **React Hook Form:** Form state management
-- **@hookform/resolvers:** Validation resolvers for forms
+*   **React Hook Form:** Form state management.
+*   **@hookform/resolvers:** Validation resolvers.
 
 ### Fonts
-- **Inter:** Google Font for body text
-- **Bebas Neue:** Google Font for display text
-- **Geist:** Vercel's font system
+*   **Inter:** Primary sans-serif font.
+*   **Bebas Neue:** Display font.
 
-### Analytics & Deployment
-- **@vercel/analytics:** Analytics integration for Vercel
-- **Deployment Platform:** Replit (migrated from Vercel on October 14, 2025)
-
-### Development Tools
-- **Autoprefixer:** CSS vendor prefixing
-- **date-fns:** Date manipulation library
-- **embla-carousel-react:** Carousel component library
-- **cmdk:** Command menu component
-- **input-otp:** OTP input component
-
-### Notable Architecture Decisions
-
-**No Backend/Database:**
-- Static landing page with no server-side data fetching
-- No API routes or database integration currently
-- Content is hardcoded in components
-- Future expansion could add form submissions or user authentication
-
-**Dark Theme Default:**
-- HTML element has `dark` class by default
-- CSS variables configured for dark mode color scheme
-- Professional navy-to-black gradient backgrounds
-- No theme toggle currently implemented
-
-**Professional UX Design:**
-- Loading screen with typing effect (6.5-second sequence)
-- Smooth fade transitions (700ms) for polished feel
-- Scroll prevention during loading
-- Timed transitions between animation stages
-- Performance considerations with CSS transforms over layout changes
-- Mobile-responsive text sizing for all devices
-
-**Credible Messaging & Conversion Focus:**
-- Hero section emphasizes credibility: "Verified 72% Win Rate Since 2021"
-- Single high-converting CTA: "🎯 GET 7 DAYS FREE NOW" with pulse animation
-- Clean, professional design without distracting imagery
-- Social proof: "1,000+ Active Members"
-- Clear value proposition: "Get verified picks and pro analysis from full-time experts"
-- Auto-popup appears 5 seconds after loading with "use code FREE at checkout" message
-- Manual popup modal triggered by CTA button
-- Promo code banner for discount awareness
-
-## Replit Migration Configuration
-
-**Migration Date:** October 14, 2025
-
-### Port & Host Configuration
-- Development server: `next dev -p 5000 -H 0.0.0.0`
-- Production server: `next start -p 5000 -H 0.0.0.0`
-- Port 5000 is required for Replit compatibility
-- Binding to 0.0.0.0 allows external access through Replit's proxy
-
-### Package Manager
-- **pnpm** with special configuration for Next.js 15 compatibility
-- `.npmrc` settings:
-  - `shamefully-hoist=true` - Hoists all dependencies to root for better module resolution
-  - `auto-install-peers=true` - Automatically installs peer dependencies
-  - `strict-peer-dependencies=false` - Allows flexibility in peer dependency versions
-
-### Next.js Configuration Adjustments
-- `transpilePackages: ['lucide-react', '@radix-ui/react-slot']` - Required for ESM module compatibility
-- `experimental.esmExternals: 'loose'` - Enables loose ESM external handling for pnpm
-- `images.unoptimized: true` - Disables image optimization for simpler deployment
-
-### Workflow
-- **Dev Server:** `pnpm run dev` on port 5000
-- Configured with webview output type for browser preview
-- Auto-restarts on file changes via Next.js Fast Refresh
-
-### Deployment
-- **Target:** Autoscale (stateless website)
-- **Build command:** `pnpm run build`
-- **Run command:** `pnpm run start`
-- Production deployment uses Next.js standalone output for efficiency
+### Development & Deployment Tools
+*   **embla-carousel-react:** For carousels.
+*   **ipapi.co:** Geolocation API for region-based pricing.
+*   **pnpm:** Package manager, configured for Next.js 15 compatibility.
+*   **@vercel/analytics:** For analytics (though deployed on Replit).
+*   **Replit:** Deployment platform.

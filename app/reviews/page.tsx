@@ -1,9 +1,11 @@
 "use client"
 
-import { Star } from "lucide-react"
+import { Star, ChevronLeft, ChevronRight } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import Image from "next/image"
+import useEmblaCarousel from "embla-carousel-react"
+import { useCallback, useEffect, useState } from "react"
 
 const reviews = [
   {
@@ -81,12 +83,49 @@ const reviews = [
 ]
 
 export default function ReviewsPage() {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    loop: true,
+    align: "start"
+  })
+  
+  const [selectedIndex, setSelectedIndex] = useState(0)
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev()
+  }, [emblaApi])
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext()
+  }, [emblaApi])
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return
+    setSelectedIndex(emblaApi.selectedScrollSnap())
+  }, [emblaApi])
+
+  useEffect(() => {
+    if (!emblaApi) return
+    onSelect()
+    emblaApi.on("select", onSelect)
+    return () => {
+      emblaApi.off("select", onSelect)
+    }
+  }, [emblaApi, onSelect])
+
+  useEffect(() => {
+    if (!emblaApi) return
+    const autoplay = setInterval(() => {
+      emblaApi.scrollNext()
+    }, 5000)
+    return () => clearInterval(autoplay)
+  }, [emblaApi])
+
   return (
     <div className="min-h-screen bg-[#0a0a0a]">
       <Navigation />
       
       <div className="pt-24 pb-20 px-4">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-6xl font-bebas font-black text-white mb-4">
               VERIFIED WHOP REVIEWS
@@ -96,36 +135,73 @@ export default function ReviewsPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {reviews.map((review) => (
-              <div
-                key={review.id}
-                className="bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] border border-gray-800 rounded-2xl p-6 hover:border-[#3b82f6]/50 transition-all duration-300"
-              >
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 border-2 border-[#3b82f6]/30">
-                    <Image 
-                      src={review.image} 
-                      alt={review.name}
-                      width={64}
-                      height={64}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-white font-semibold mb-2">{review.name}</h3>
-                    <div className="flex gap-1">
-                      {[...Array(review.rating)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-yellow-500 text-yellow-500" />
-                      ))}
+          <div className="relative px-12">
+            <button
+              onClick={scrollPrev}
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#3b82f6] hover:bg-[#2563eb] text-white p-3 rounded-full transition-all duration-300 shadow-lg hover:scale-110 hidden md:flex items-center justify-center"
+              aria-label="Previous review"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+
+            <div className="overflow-hidden" ref={emblaRef}>
+              <div className="flex -ml-4">
+                {reviews.map((review) => (
+                  <div
+                    key={review.id}
+                    className="flex-[0_0_100%] min-w-0 md:flex-[0_0_50%] lg:flex-[0_0_33.333%] pl-4"
+                  >
+                    <div className="bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] border border-gray-800 rounded-2xl p-6 h-full hover:border-[#3b82f6]/50 transition-all duration-300 mr-4">
+                      <div className="flex items-start gap-4 mb-4">
+                        <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 border-2 border-[#3b82f6]/30 bg-gray-800">
+                          <Image 
+                            src={review.image} 
+                            alt={review.name}
+                            width={64}
+                            height={64}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-white font-semibold mb-2">{review.name}</h3>
+                          <div className="flex gap-1">
+                            {[...Array(review.rating)].map((_, i) => (
+                              <Star key={i} className="w-4 h-4 fill-yellow-500 text-yellow-500" />
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <p className="text-gray-300 mb-4 leading-relaxed min-h-[100px]">{review.text}</p>
+                      
+                      <p className="text-sm text-gray-500">{review.timeframe}</p>
                     </div>
                   </div>
-                </div>
-                
-                <p className="text-gray-300 mb-4 leading-relaxed">{review.text}</p>
-                
-                <p className="text-sm text-gray-500">{review.timeframe}</p>
+                ))}
               </div>
+            </div>
+
+            <button
+              onClick={scrollNext}
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#3b82f6] hover:bg-[#2563eb] text-white p-3 rounded-full transition-all duration-300 shadow-lg hover:scale-110 hidden md:flex items-center justify-center"
+              aria-label="Next review"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+          </div>
+
+          <div className="flex justify-center gap-2 mt-8">
+            {reviews.map((_, index) => (
+              <button
+                key={index}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  index === selectedIndex 
+                    ? "w-8 bg-[#3b82f6]" 
+                    : "w-2 bg-gray-600 hover:bg-gray-500"
+                }`}
+                onClick={() => emblaApi?.scrollTo(index)}
+                aria-label={`Go to review ${index + 1}`}
+              />
             ))}
           </div>
 
